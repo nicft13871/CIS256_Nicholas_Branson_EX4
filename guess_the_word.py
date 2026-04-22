@@ -78,17 +78,22 @@ class HangmanGame:
 
 # Print Header and get user name then greeting
 word_list = ["Apple", "Orange", "Banana", "Grape", "Watermelon", "Pineapple", "Cantaloupe", "Strawberry"]
+user_name=""
 
-print("--- Welcome to the game of hangman ---")
-user_name = input("Can I get your first name: ")
-print(f"Well it's nice meeting you, {user_name.title()}!\n--- Let's begin ---\nCategory is 'Fruits'")
-# Call game class with preset word list
-game = HangmanGame(word_list, user_name)
+def main():
+    print("--- Welcome to the game of hangman ---")
+    user_name = input("Can I get your first name: ")
+    print(f"Well it's nice meeting you, {user_name.title()}!\n--- Let's begin ---\nCategory is 'Fruits'")
 
-# Loop to keep game going till user types 'N'
-while True:
-    game.play()
-    again = input("\nDo you want to play again? (y/n): ").lower()
-    if again != "y":
-        print("Thanks for playing! Goodbye")
-        break
+    game = HangmanGame(word_list, user_name)
+
+        # Loop to keep game going till user types 'N'
+    while True:
+        game.play()
+        again = input("\nDo you want to play again? (y/n): ").lower()
+        if again != "y":
+            print("Thanks for playing! Goodbye")
+            break
+
+if __name__ == "__main__":
+     main()
