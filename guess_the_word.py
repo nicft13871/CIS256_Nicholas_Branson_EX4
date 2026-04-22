@@ -1,8 +1,6 @@
 # Nicholas Branson
 # CIS256 26671 (Spring 2026)
 # Exercise Assignment 4
-#dsgsd
-#Update logic
 
 # Imported Libraries 
 import random
@@ -80,6 +78,7 @@ class HangmanGame:
 word_list = ["Apple", "Orange", "Banana", "Grape", "Watermelon", "Pineapple", "Cantaloupe", "Strawberry"]
 user_name=""
 
+# Main program to start HandmanGame class and gether user name
 def main():
     print("--- Welcome to the game of hangman ---")
     user_name = input("Can I get your first name: ")
@@ -94,6 +93,6 @@ def main():
         if again != "y":
             print("Thanks for playing! Goodbye")
             break
-
+# Allows when running tests to bypass name input
 if __name__ == "__main__":
      main()
